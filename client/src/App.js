@@ -22,8 +22,8 @@ export default class App extends Component {
     return (
       <div>
         <SavedList list={this.state.savedList} />
-        <Route exact path = '/' component = {MovieList}></Route>
-        <Route path = '/movies/:mID' component = {Movie}></Route>
+        <Route exact path = '/' render={props => <MovieList {...props} />}></Route>
+        <Route path = '/movies/:mID' render={props => <Movie {...props} />}></Route>
       </div>
 
       
